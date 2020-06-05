@@ -4,17 +4,17 @@ import symulacja.mapa.PositionOccupation;
 
 public class Vehicle extends VehicleProperties implements VehicleFunction{
 
-    public Vehicle(int maxSpeed) {
-        super(maxSpeed);
+    public Vehicle(int maxSpeed, int speed, int coordinateX, int coordinateY) {
+        super(maxSpeed,speed, coordinateX, coordinateY);
     }
 
     @Override
-    public int speed() {
+    public int speed(int maxSpeed) {
         return 0;
     }
 
     @Override
-    public void move(int maxSpeed) throws InterruptedException {
+    public void move(int speed) throws InterruptedException {
 
     }
 
