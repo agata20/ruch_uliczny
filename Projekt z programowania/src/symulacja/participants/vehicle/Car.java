@@ -6,8 +6,8 @@ import java.util.Random;
 
 public class Car extends Vehicle {
 
-    public Car(int maxSpeed) {
-        super(maxSpeed);
+    public Car(int maxSpeed,int speed,int coordinateX, int coordinateY) {
+        super(maxSpeed,speed,coordinateX,coordinateY);
     }
 
     private int speedSlowerCar;
@@ -53,11 +53,9 @@ public class Car extends Vehicle {
     }
 
 
-    public void move(int maxSpeed) throws InterruptedException {
+    public void move(int speed) throws InterruptedException {
         if (coordinateX == 1) {
-            for (; coordinateX == 31; coordinateX++) {
-                Thread.sleep(maxSpeed * 1000);//inaczej bez 1000 będą milisekundy
-
+                coordinateX+=(speed/10);
                 switch (seeObstacle(coordinateX, coordinateY)) {
                     case HUMAN:
                     case DOG:
@@ -75,13 +73,9 @@ public class Car extends Vehicle {
                         break;
                     default:
                         accelerate(speed, maxSpeed);
-                }
             }
         } else {
-            for (; coordinateX == 0; coordinateX--) {
-
-                Thread.sleep(maxSpeed * 1000);//inaczej bez 1000 będą milisekundy
-
+                coordinateX-=(speed/10);
                 switch (seeObstacle(coordinateX, coordinateY)) {
                     case HUMAN:
                     case DOG:
@@ -99,7 +93,6 @@ public class Car extends Vehicle {
                         break;
                     default:
                         accelerate(speed, maxSpeed);
-                }
             }
         }
     }
