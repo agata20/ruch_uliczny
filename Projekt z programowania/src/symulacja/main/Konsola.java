@@ -1,0 +1,102 @@
+package symulacja.main;
+
+import java.util.Scanner;
+
+public class Konsola implements Consola {
+
+    public int maxSpeedCar;
+    public int maxSpeedBicycle;
+    public int safeSpeedCar;
+    public int safeSpeedBicycle;
+    public int numberCar;
+    public int numberBicycle;
+    public int timeReactionCar;
+    public int timeReactionBicycle;
+    public int numberHuman;
+    public int numberDog;
+
+    public Konsola() {
+        this.maxSpeedCar = setMaxSpeedCar();
+        this.maxSpeedBicycle = setMaxSpeedBicycle();
+        this.safeSpeedCar = setSafeSpeedCar();
+        this.safeSpeedBicycle = setSafeSpeedBicycle();
+        this.numberCar =  setNumberCar();
+        this.numberBicycle =  setNumberBicycle();
+        this.timeReactionCar = setTimeReactionCar();
+        this.timeReactionBicycle = setTimeReactionBicycle();
+        this.numberHuman =  setNumberHuman();
+        this.numberDog =  setNumberDog();
+
+    }
+
+    public int setMaxSpeedCar() {
+        System.out.println("Prosze wporwadzic maxymalna predkosc auta na drodze");
+        Scanner scanner = new Scanner(System.in);
+        int maxSpeedCar = scanner.nextInt();
+        return maxSpeedCar;
+    }
+
+    public int setMaxSpeedBicycle() {
+        System.out.println("Prosze wporwadzic maksymalna predkosc roweru na drodze");
+        Scanner scanner = new Scanner(System.in);
+        int maxSpeedBicycle = scanner.nextInt();
+        return maxSpeedBicycle;
+    }
+
+    public int setSafeSpeedCar() {
+        System.out.println("Prosze wporwadzic bezpieczna predkosc auta na drodze");
+        Scanner scanner = new Scanner(System.in);
+        int safeSpeedCar = scanner.nextInt();
+        return safeSpeedCar;
+    }
+
+    public int setSafeSpeedBicycle() {
+        System.out.println("Prosze wporwadzic bezpieczna predkosc roweru na drodze");
+        Scanner scanner = new Scanner(System.in);
+        int safeSpeedBicycle = scanner.nextInt();
+        return safeSpeedBicycle;
+    }
+
+    public int setNumberCar() {
+        System.out.println("Prosze wporwadzic ilosc SAMOCHODÓW, ktore przejada po drodze");
+        Scanner scanner = new Scanner(System.in);
+        int numberCar = scanner.nextInt();
+        return numberCar;
+    }
+
+    public int setNumberBicycle() {
+        System.out.println("Prosze wporwadzic ilosc ROWERÓW, ktore przejada po drodze");
+        Scanner scanner = new Scanner(System.in);
+        int numberBicycle = scanner.nextInt();
+        return numberBicycle;
+    }
+
+    public int setTimeReactionCar() {
+        System.out.println("Prosze czas rekacji auta na drodze");
+        Scanner scanner = new Scanner(System.in);
+        int timeReactionCar = scanner.nextInt();
+        return timeReactionCar;
+    }
+
+    public int setTimeReactionBicycle() {
+        System.out.println("Prosze wporwadzic ilosc pojazdow, kotre przejada po drodze");
+        Scanner scanner = new Scanner(System.in);
+        int timeReactionBicycle = scanner.nextInt();
+        return timeReactionBicycle;
+    }
+
+    public int setNumberHuman() {
+        System.out.println("Prosze wporwadzic ilosc LUDZI, ktore przejda przez ulice");
+        Scanner scanner = new Scanner(System.in);
+        int numberHuman = scanner.nextInt();
+        return numberHuman;
+    }
+
+    public int setNumberDog() {
+        System.out.println("Prosze wporwadzic ilosc PSÓW, ktore przejda przez ulice");
+        Scanner scanner = new Scanner(System.in);
+        int numberDog = scanner.nextInt();
+        return numberDog;
+    }
+}
+
