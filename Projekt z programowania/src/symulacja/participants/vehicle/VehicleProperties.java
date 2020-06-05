@@ -16,7 +16,7 @@ public class VehicleProperties implements RandomPositionOccupation {
     protected PositionOccupation[][] Mapa;
     protected PositionOccupation positionOccupation;
 
-    public VehicleProperties(int maxSpeed) {
+    public VehicleProperties(int maxSpeed,int speed, int coordinateX, int coordinateT) {
         this.maxSpeed = maxSpeed;
         this.speed = speed(maxSpeed);
         this.coordinateX = coordinateX();
